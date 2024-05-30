@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjdy3tprg3uci"]
+
+[ext_resource type="Script" path="res://scripts/button-title-play.gd" id="1_66pnl"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1287.0
+offset_bottom = 720.0
+color = Color(0.290196, 1, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 1267.0
+offset_bottom = 575.0
+theme_override_colors/font_color = Color(0, 0, 0.847059, 1)
+theme_override_font_sizes/font_size = 27
+text = "Simple 3D Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button-title-play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 464.0
+offset_right = 765.0
+offset_bottom = 596.0
+theme_override_colors/font_color = Color(0.945098, 0.913725, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.691436, 1.34766e-06, 1)
+theme_override_font_sizes/font_size = 32
+text = "PLAY"
+script = ExtResource("1_66pnl")
+
+[connection signal="pressed" from="button-title-play" to="button-title-play" method="_on_pressed"]
