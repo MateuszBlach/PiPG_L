@@ -1,8 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://crsekhv2okid3"]
+[gd_scene load_steps=4 format=3 uid="uid://crsekhv2okid3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4wnxn"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ui1n"]
+albedo_color = Color(1, 0.294118, 1, 1)
+
 [sub_resource type="SphereMesh" id="SphereMesh_xd7kx"]
+material = SubResource("StandardMaterial3D_8ui1n")
 
 [node name="Steve" type="CharacterBody3D"]
 

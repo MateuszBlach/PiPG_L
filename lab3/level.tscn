@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dx7dhg63ftu52"]
+[gd_scene load_steps=8 format=3 uid="uid://dx7dhg63ftu52"]
 
 [ext_resource type="PackedScene" uid="uid://crsekhv2okid3" path="res://assets/steve.tscn" id="1_ddr6r"]
 [ext_resource type="Script" path="res://scripts/steve.gd" id="2_a5tq0"]
@@ -10,7 +10,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_0k25a"]
 size = Vector3(30, 1, 30)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bit1"]
+albedo_color = Color(0.673518, 0.49465, 0.0424638, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_n4ei1"]
+material = SubResource("StandardMaterial3D_7bit1")
 size = Vector3(30, 1, 30)
 
 [node name="Level" type="Node3D"]
@@ -34,7 +38,7 @@ shape = SubResource("BoxShape3D_nd3qc")
 mesh = SubResource("BoxMesh_r82l3")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.948567, 0.316576, 0, -0.316576, 0.948567, 0.105233, 3.73005, 7.85356)
+transform = Transform3D(-0.998595, -0.016778, 0.0502725, 8.44686e-09, 0.948567, 0.316576, -0.0529983, 0.316131, -0.947234, 0.432558, 3.73005, -11.6396)
 fov = 65.7235
 
 [node name="Floor" type="StaticBody3D" parent="."]
