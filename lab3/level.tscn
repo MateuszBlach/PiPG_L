@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dx7dhg63ftu52"]
+[gd_scene load_steps=11 format=3 uid="uid://dx7dhg63ftu52"]
 
 [ext_resource type="PackedScene" uid="uid://crsekhv2okid3" path="res://assets/steve.tscn" id="1_ddr6r"]
 [ext_resource type="Script" path="res://scripts/steve.gd" id="2_a5tq0"]
@@ -16,6 +16,18 @@ albedo_color = Color(0.673518, 0.49465, 0.0424638, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_n4ei1"]
 material = SubResource("StandardMaterial3D_7bit1")
 size = Vector3(30, 1, 30)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kjxxa"]
+sky_top_color = Color(0, 0.844213, 0.968509, 1)
+ground_bottom_color = Color(0.536324, 0.479396, 0.863285, 1)
+
+[sub_resource type="Sky" id="Sky_hj28d"]
+sky_material = SubResource("ProceduralSkyMaterial_kjxxa")
+
+[sub_resource type="Environment" id="Environment_ionh8"]
+background_mode = 2
+sky = SubResource("Sky_hj28d")
+ambient_light_color = Color(0.959977, 0.776216, 0.892529, 1)
 
 [node name="Level" type="Node3D"]
 
@@ -37,10 +49,6 @@ shape = SubResource("BoxShape3D_nd3qc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Box2"]
 mesh = SubResource("BoxMesh_r82l3")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.998595, -0.016778, 0.0502725, 8.44686e-09, 0.948567, 0.316576, -0.0529983, 0.316131, -0.947234, 0.432558, 3.73005, -11.6396)
-fov = 65.7235
-
 [node name="Floor" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
@@ -52,3 +60,12 @@ mesh = SubResource("BoxMesh_n4ei1")
 [node name="Steve" parent="." instance=ExtResource("1_ddr6r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
 script = ExtResource("2_a5tq0")
+
+[node name="Camera3D" type="Camera3D" parent="Steve"]
+transform = Transform3D(-0.998595, -0.016778, 0.0502725, 8.44686e-09, 0.948567, 0.316576, -0.0529983, 0.316131, -0.947234, 0.432558, 2.73005, -14.6396)
+environment = SubResource("Environment_ionh8")
+fov = 65.7235
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.255918, 0.966698, 0, -0.966698, -0.255918, 0, 12.9932, 0)
+shadow_enabled = true
