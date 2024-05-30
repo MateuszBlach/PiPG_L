@@ -11,3 +11,4 @@ sky_material = SubResource("ProceduralSkyMaterial_kjxxa")
 background_mode = 2
 sky = SubResource("Sky_hj28d")
 ambient_light_color = Color(0.959977, 0.776216, 0.892529, 1)
+ssao_enabled = true

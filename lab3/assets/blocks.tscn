@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c21c5f3svf5qj"]
+
+[ext_resource type="PackedScene" uid="uid://bum52r8nrthxv" path="res://imports/block.gltf" id="1_tls7q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_glyb1"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="block" parent="." instance=ExtResource("1_tls7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.260851, 0, -0.382236)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block/StaticBody3D"]
+shape = SubResource("BoxShape3D_glyb1")
+
+[node name="block2" parent="." instance=ExtResource("1_tls7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.260851, 0, 1.61776)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block2/StaticBody3D"]
+shape = SubResource("BoxShape3D_glyb1")
