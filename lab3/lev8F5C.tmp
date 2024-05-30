@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://crsekhv2okid3" path="res://assets/steve.tscn" id="1_ddr6r"]
 [ext_resource type="Script" path="res://scripts/steve.gd" id="2_a5tq0"]
 [ext_resource type="Environment" uid="uid://be6r4e8xfc5at" path="res://assets/New_env.tres" id="4_gx3qi"]
-[ext_resource type="MeshLibrary" uid="uid://bvj86feahbc0d" path="res://assets/blockLibrary2.tres" id="5_dtfft"]
+[ext_resource type="MeshLibrary" uid="uid://bjon8j5qmurc5" path="res://assets/blocksLibrary.tres" id="5_36rly"]
 [ext_resource type="PackedScene" uid="uid://dc8ojg466q26q" path="res://assets/enemy.tscn" id="6_1limj"]
 [ext_resource type="PackedScene" uid="uid://l06w280hd4on" path="res://assets/coin.tscn" id="7_vxuvw"]
 [ext_resource type="Texture2D" uid="uid://bt8f43lll25it" path="res://sprites/hud_coin.png" id="8_3n52s"]
@@ -105,7 +105,7 @@ shadow_enabled = true
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh_library = ExtResource("5_dtfft")
+mesh_library = ExtResource("5_36rly")
 cell_size = Vector3(1, 1, 1)
 data = {
 "cells": PackedInt32Array(65521, 65521, 524288, 65522, 65521, 524288, 65523, 65521, 524288, 65524, 65521, 524288, 65525, 65521, 524288, 65526, 65521, 524288, 65527, 65521, 524288, 65528, 65521, 524288, 65529, 65521, 524288, 65530, 65521, 524288, 65531, 65521, 524288, 65532, 65521, 524288, 65533, 65521, 524288, 65534, 65521, 524288, 65535, 65521, 524288, 0, 65521, 524288, 1, 65521, 524288, 2, 65521, 524288, 4, 65521, 524288, 5, 65521, 524288, 3, 65521, 524288, 6, 65521, 524288, 7, 65521, 524288, 8, 65521, 0, 9, 65521, 0, 10, 65521, 0, 11, 65521, 0, 12, 65521, 0, 13, 65521, 0, 14, 65521, 0, 14, 65522, 0, 14, 65523, 0, 14, 65524, 0, 14, 65525, 0, 14, 65526, 0, 14, 65527, 0, 14, 65528, 0, 14, 65529, 0, 14, 65530, 0, 14, 65531, 0, 14, 65532, 0, 14, 65533, 0, 14, 65534, 0, 14, 65535, 0, 14, 0, 0, 14, 1, 0, 14, 2, 0, 14, 3, 0, 14, 4, 0, 14, 5, 0, 14, 6, 0, 14, 7, 0, 14, 8, 0, 14, 9, 0, 14, 10, 0, 14, 11, 0, 14, 12, 0, 14, 13, 0, 14, 14, 0, 13, 14, 0, 12, 14, 0, 11, 14, 0, 10, 14, 0, 9, 14, 0, 8, 14, 0, 7, 14, 0, 6, 14, 0, 5, 14, 0, 4, 14, 0, 3, 14, 0, 2, 14, 0, 1, 14, 0, 0, 14, 0, 65535, 14, 0, 65534, 14, 0, 65533, 14, 0, 65532, 14, 0, 65531, 14, 0, 65530, 14, 0, 65529, 14, 0, 65528, 14, 0, 65527, 14, 0, 65526, 14, 0, 65525, 14, 0, 65524, 14, 0, 65523, 14, 0, 65522, 14, 0, 65521, 14, 0, 65521, 13, 0, 65521, 12, 0, 65521, 11, 0, 65521, 10, 0, 65521, 9, 0, 65521, 8, 0, 65521, 7, 0, 65521, 6, 0, 65521, 5, 0, 65521, 4, 0, 65521, 3, 0, 65521, 2, 0, 65521, 1, 0, 65521, 0, 0, 65521, 65535, 0, 65521, 65534, 0, 65521, 65533, 0, 65521, 65532, 0, 65521, 65531, 0, 65521, 65530, 0, 65521, 65529, 0, 65521, 65528, 0, 65521, 65527, 0, 65521, 65526, 0, 65521, 65525, 0, 65521, 65522, 0, 65521, 65523, 0, 65521, 65524, 0, -589814, 14, 851968, -589814, 13, 851968, -589813, 12, 851968, -589813, 11, 851968, -589813, 10, 851968, -589813, 9, 851968, 3, 13, 851968, 3, 12, 851968, 3, 11, 851968, 3, 10, 851968, 7, 65534, 851968, 8, 65534, 851968, 9, 65534, 851968, 10, 65534, 851968, 5, 65522, 851968, 5, 65523, 851968, 5, 65524, 851968, 5, 65525, 851968, 5, 65526, 851968, 5, 65527, 851968, 65531, 65535, 851968, 65531, 65534, 851968, 65531, 65533, 851968, 65531, 65532, 851968, 65532, 65532, 851968, 65533, 65532, 851968, 65534, 65532, 851968, 65528, 9, 851968, 65529, 9, 851968, 65530, 9, 851968, 65531, 9, 851968, 65532, 9, 851968, 65533, 9, 851968, 65528, 7, 851968, 65528, 6, 851968, 65528, 5, 851968, 65528, 4, 851968, 65528, 3, 851968, 65534, 9, 851968, 65528, 8, 851968, 3, 9, 851968, 13, 65534, 851968, 12, 65534, 851968, 11, 65534, 851968, 7, 65535, 851968, 7, 1, 851968, 7, 0, 851968, 65534, 65526, 851968, 65533, 65526, 851968, 65532, 65526, 851968, 65531, 65526, 851968, 65530, 65526, 851968, 65529, 65526, 851968, 65528, 65526, 851968, 65527, 65526, 851968, 65526, 65526, 851968, 65526, 65527, 851968, 65526, 65528, 851968, 65526, 65529, 851968, 65526, 65530, 851968, 65526, 65531, 851968)
@@ -135,18 +135,6 @@ autoplay = "enemy2animation"
 [node name="coin" parent="Coins" instance=ExtResource("7_vxuvw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37582, 0)
 
-[node name="coin2" parent="Coins" instance=ExtResource("7_vxuvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28622, 1.37582, 0)
-
-[node name="coin3" parent="Coins" instance=ExtResource("7_vxuvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28622, 1.37582, 11.055)
-
-[node name="coin4" parent="Coins" instance=ExtResource("7_vxuvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6953, 1.37582, 11.055)
-
-[node name="coin5" parent="Coins" instance=ExtResource("7_vxuvw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6953, 1.37582, -7.51189)
-
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -172,12 +160,3 @@ script = ExtResource("9_ja3cx")
 [connection signal="body_entered" from="enemy1" to="Steve" method="_on_enemy_body_entered"]
 [connection signal="body_entered" from="enemy2" to="Steve" method="_on_enemy_body_entered"]
 [connection signal="body_entered" from="Coins/coin" to="Coins/coin" method="_on_body_entered"]
-[connection signal="coin_collected" from="Coins/coin" to="Control/counter" method="_on_coin_coin_collected"]
-[connection signal="body_entered" from="Coins/coin2" to="Coins/coin2" method="_on_body_entered"]
-[connection signal="coin_collected" from="Coins/coin2" to="Control/counter" method="_on_coin_coin_collected"]
-[connection signal="body_entered" from="Coins/coin3" to="Coins/coin3" method="_on_body_entered"]
-[connection signal="coin_collected" from="Coins/coin3" to="Control/counter" method="_on_coin_coin_collected"]
-[connection signal="body_entered" from="Coins/coin4" to="Coins/coin4" method="_on_body_entered"]
-[connection signal="coin_collected" from="Coins/coin4" to="Control/counter" method="_on_coin_coin_collected"]
-[connection signal="body_entered" from="Coins/coin5" to="Coins/coin5" method="_on_body_entered"]
-[connection signal="coin_collected" from="Coins/coin5" to="Control/counter" method="_on_coin_coin_collected"]

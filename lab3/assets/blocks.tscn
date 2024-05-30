@@ -1,23 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c21c5f3svf5qj"]
+[gd_scene load_steps=4 format=3 uid="uid://c21c5f3svf5qj"]
 
-[ext_resource type="PackedScene" uid="uid://bum52r8nrthxv" path="res://imports/block.gltf" id="1_tls7q"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_82ddk"]
+albedo_color = Color(0.466667, 1, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_glyb1"]
+[sub_resource type="BoxMesh" id="BoxMesh_52uit"]
+material = SubResource("StandardMaterial3D_82ddk")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aiafl"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="block" parent="." instance=ExtResource("1_tls7q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.260851, 0, -0.382236)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_52uit")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="block"]
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="block/StaticBody3D"]
-shape = SubResource("BoxShape3D_glyb1")
-
-[node name="block2" parent="." instance=ExtResource("1_tls7q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.260851, 0, 1.61776)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="block2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="block2/StaticBody3D"]
-shape = SubResource("BoxShape3D_glyb1")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_aiafl")
